@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+   	<bean id="userBo" 
+         class="com.kiubilabs.bo.impl.UserBoImpl" >
+   		<property name="userDao" ref="userDao" />
+   	</bean>
+ 
+   	<bean id="userDao" 
+         class="com.kiubilabs.dao.impl.UserDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory" />
+   	</bean>
+ 
+</beans>

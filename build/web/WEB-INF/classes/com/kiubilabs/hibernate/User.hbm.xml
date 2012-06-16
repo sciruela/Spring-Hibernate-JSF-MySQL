@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.kiubilabs.model.User" 
+        table="person" catalog="Proofs">
+ 
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="first_name" type="string">
+            <column name="FIRST_NAME" length="45" not-null="true" />
+        </property>
+         <property name="last_name" type="string">
+            <column name="LAST_NAME" length="45" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" not-null="true" />
+        </property>
+         <property name="phone" type="string">
+            <column name="PHONE" not-null="true" />
+        </property>
+         <property name="email" type="string">
+            <column name="EMAIL" not-null="true" />
+        </property>
+       
+    </class>
+</hibernate-mapping>
